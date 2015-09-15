@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:c="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"                    
+                xmlns:p="http://primefaces.org/ui"
+                template="/plantillas/template.xhtml">
+    <ui:define name="content">
+
+        <h:form id="form">
+
+            <h3>cliente web service</h3>
+            <br/>
+            <p:panel header="view service">
+                <h:panelGrid columns="2">
+                    <p:outputLabel value="Cargar mensaje"/>
+                    
+                    <p:commandButton value="Buscar" actionListener="#{testController.cargarMensaje()}"
+                                     update="form" process="@form"/>
+                </h:panelGrid>
+                <pre></pre>    
+                
+            </p:panel>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
+
+

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws.pft.utpl.edu/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.pft.utpl.edu/">
+
+<xs:element name="get_modalidades" type="tns:get_modalidades"/>
+
+<xs:element name="get_modalidadesResponse" type="tns:get_modalidadesResponse"/>
+
+<xs:element name="get_persona_por_cedula" type="tns:get_persona_por_cedula"/>
+
+<xs:element name="get_persona_por_cedulaResponse" type="tns:get_persona_por_cedulaResponse"/>
+
+<xs:element name="get_personas" type="tns:get_personas"/>
+
+<xs:element name="get_personasResponse" type="tns:get_personasResponse"/>
+
+<xs:complexType name="get_persona_por_cedula">
+<xs:sequence>
+<xs:element name="cedula" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="get_persona_por_cedulaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="get_modalidades">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="get_modalidadesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="get_personas">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="get_personasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

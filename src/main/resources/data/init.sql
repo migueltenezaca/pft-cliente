@@ -1,0 +1,2 @@
+--INSERT INTO public.persona (id, fechanacimiento, identificacion, nombre, residencia_id) values (1, '2005-06-15' , '00000000' , 'cesar' , null);
+--INSERT INTO public.persona(id, apellido, nombre, fechanacimiento, identificacion, tipoidentificacion, residencia_id) VALUES (2, 'Cesar', 'Abad', '1989-06-24', '1722404041', 'Cedula', null);

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:jaxws="http://cxf.apache.org/jaxws"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://cxf.apache.org/jaxws 
+   http://cxf.apache.org/schemas/jaxws.xsd">
+
+    <jaxws:client name="{http://ws.pft.utpl.edu/}ServicePft" createdFromAPI="true">
+        <!-- Comment below element to use non-WS-SecPol CXF interceptor method -->
+        <jaxws:properties>
+            <entry key="ws-security.callback-handler" value="consumidor.ClientCallback"/>        
+            <entry key="ws-security.encryption.properties" value="clientKeystore.properties"/>
+            <entry key="ws-security.signature.properties" value="clientKeystore.properties"/>
+            <entry key="ws-security.encryption.username" value="testkey"/>
+        </jaxws:properties>
+
+        <!-- Uncomment below interceptors to use CXF interceptor method -->
+        <!--jaxws:inInterceptors>
+            <ref bean="TimestampSignEncrypt_Response"/>
+            <bean class="org.apache.cxf.ws.security.wss4j.DefaultCryptoCoverageChecker"/>
+        </jaxws:inInterceptors>
+        <jaxws:outInterceptors>
+            <ref bean="TimestampSignEncrypt_Request"/>
+        </jaxws:outInterceptors-->
+    </jaxws:client>
+
