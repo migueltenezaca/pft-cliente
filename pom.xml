@@ -117,12 +117,7 @@
             <artifactId>cxf-rt-transports-http</artifactId>
             <version>3.1.2</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-rt-transports-http-jetty</artifactId>
-            <version>3.1.2</version>
-        </dependency>
-        
+                
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-common-utilities</artifactId>
@@ -162,6 +157,17 @@
             <version>3.1.2</version>
         </dependency>
         
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk16</artifactId>
+            <version>1.46</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         
         <dependency>
             <groupId>org.springframework</groupId>

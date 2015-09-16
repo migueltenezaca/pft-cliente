@@ -21,13 +21,12 @@ public class ClientCallback implements CallbackHandler {
     public void handle(Callback[] callbacks) throws IOException, UnsupportedCallbackException {
         WSPasswordCallback pc = (WSPasswordCallback) callbacks[0];
         // set the password for our message.
-        //pc.setPassword("clientstorepass");
-        if (pc.getIdentifier().equals("testKey") ) {
-            if (!pc.getPassword().equals("clientstorepass")) {
-                throw new IOException("contraseña no es correcta");
-            }
-        }
+        if (pc.getIdentifier().equals("s1as")) {
+        // set the password on the callback. This will be compared to the
+            // password which was sent from the client.
+            pc.setPassword("changeit");
 
+        }
     }
 
 }

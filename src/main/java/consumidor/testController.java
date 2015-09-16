@@ -30,6 +30,6 @@ public class testController implements Serializable{
     public void cargarMensaje(){
         ServicePFTClient s = new ServicePFTClient();        
         System.out.println("PASO 1");
-        s.encryptMessageSoap2();
+        s.test3();
     }
 }
